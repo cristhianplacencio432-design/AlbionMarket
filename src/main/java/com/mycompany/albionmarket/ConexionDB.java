@@ -6,11 +6,7 @@ import java.sql.SQLException;
 public class ConexionDB {
 
     public static Connection getConnection() throws SQLException {
-        String url = System.getenv("mysql://root:JqtePRgmSavzBExtrrhclJmZhZyjDoBB@acela.proxy.rlwy.net:45740/railway");
-        
-        if (url == null) {
-            throw new SQLException("Variable MYSQL_PUBLIC_URL no configurada");
-        }
+        String url = "jdbc:mysql://root:JqtePRgmSavzBExtrrhclJmZhZyjDoBB@acela.proxy.rlwy.net:45740/railway?useSSL=false&allowPublicKeyRetrieval=true";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
