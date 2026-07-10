@@ -30,6 +30,9 @@ public class RegistroServlet extends HttpServlet {
         String nombre = request.getParameter("nombre");
         String email = request.getParameter("email");
         String contrasena = request.getParameter("contrasena");
+        System.out.println("nombre: " + nombre);
+System.out.println("email: " + email);
+System.out.println("contrasena: " + contrasena);
 
         if (nombre == null || email == null || contrasena == null ||
             nombre.isEmpty() || email.isEmpty() || contrasena.isEmpty()) {
